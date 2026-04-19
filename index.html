@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI, in plain language · A Trend Field Guide</title>
+  <meta name="description" content="An executive field guide to modern AI, LLMs, and agents for Trend leadership." />
+  <meta name="color-scheme" content="light" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="progress" id="progress" aria-hidden="true"></div>
+
+  <header class="site-header" id="header">
+    <div class="container header-row">
+      <a href="#top" class="brand" aria-label="Back to top">
+        <span class="brand-mark" aria-hidden="true">T</span>
+        <span class="brand-text">Trend <span class="brand-sub">/ Field Guide</span></span>
+      </a>
+      <nav class="site-nav" aria-label="Section navigation">
+        <a href="#stack">Stack</a>
+        <a href="#gen-vs-agentic">Gen vs Agentic</a>
+        <a href="#agents">Agents</a>
+        <a href="#tools">Tools</a>
+        <a href="#trend">For Trend</a>
+        <a href="#glossary">Glossary</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container">
+        <p class="eyebrow">A Trend Field Guide &nbsp;·&nbsp; v1.0 &nbsp;·&nbsp; Apr 2026</p>
+        <h1 class="display">AI, <em>in plain language.</em></h1>
+        <p class="lede">
+          AI is no longer just a chatbot on a screen. It's becoming part of software, workflows, research, and operations.
+          This page exists to build a shared working vocabulary — so future conversations about tools, systems, and opportunities
+          at Trend start from the same mental model.
+        </p>
+        <div class="meta-row">
+          <span>For Trend leadership</span>
+          <span class="sep">·</span>
+          <span>~12 min read</span>
+          <span class="sep">·</span>
+          <span>Living document</span>
+        </div>
+
+        <figure class="stack-diagram" aria-label="The full AI stack: provider, model, app, workflow, agent, outcome. Click any item for a short reference.">
+          <ol class="stack-row">
+            <li class="stack-node">
+              <a class="stack-node__link"
+                 href="https://grokipedia.com/page/Foundation_model"
+                 target="_blank" rel="noopener noreferrer"
+                 data-preview-term="Provider · Foundation model"
+                 data-preview-summary="The large, general-purpose models that providers like OpenAI, Anthropic, and Google train at scale and make available for others to build on. One upstream model powers many downstream applications.">
+                <span class="node-num">01</span>
+                <span class="node-name">Provider</span>
+              </a>
+            </li>
+            <li class="stack-node">
+              <a class="stack-node__link"
+                 href="https://grokipedia.com/page/Large_language_model"
+                 target="_blank" rel="noopener noreferrer"
+                 data-preview-term="Model · Large language model"
+                 data-preview-summary="A neural network trained on enormous amounts of text so it can generate language — words, code, structured output. The practical engine behind most AI products people interact with today.">
+                <span class="node-num">02</span>
+                <span class="node-name">Model</span>
+              </a>
+            </li>
+            <li class="stack-node">
+              <a class="stack-node__link"
+                 href="https://grokipedia.com/page/Chatbot"
+                 target="_blank" rel="noopener noreferrer"
+                 data-preview-term="App / Tool · Chatbot"
+                 data-preview-summary="The interface layer that wraps a model in something a person can talk to. ChatGPT, Claude, and Gemini are the canonical examples — a window, a prompt, a response.">
+                <span class="node-num">03</span>
+                <span class="node-name">App / Tool</span>
+              </a>
+            </li>
+            <li class="stack-node">
+              <a class="stack-node__link"
+                 href="https://grokipedia.com/page/Workflow"
+                 target="_blank" rel="noopener noreferrer"
+                 data-preview-term="Workflow"
+                 data-preview-summary="A defined sequence of tasks that takes an input through to an outcome. AI-assisted workflows add language understanding and reasoning at specific steps, without letting AI run the whole process.">
+                <span class="node-num">04</span>
+                <span class="node-name">Workflow</span>
+              </a>
+            </li>
+            <li class="stack-node">
+              <a class="stack-node__link"
+                 href="https://grokipedia.com/page/AI_agent"
+                 target="_blank" rel="noopener noreferrer"
+                 data-preview-term="AI agent"
+                 data-preview-summary="A software system that uses a model to plan, take actions, and check its own work toward a goal. Unlike a chatbot, an agent operates across tools and steps rather than answering a single question.">
+                <span class="node-num">05</span>
+                <span class="node-name">Agent</span>
+              </a>
+            </li>
+            <li class="stack-node stack-node--end">
+              <a class="stack-node__link"
+                 href="https://grokipedia.com/page/Business_value"
+                 target="_blank" rel="noopener noreferrer"
+                 data-preview-term="Outcome · Business value"
+                 data-preview-summary="The tangible and intangible benefit a business gets from its work — revenue, efficiency, quality, reach. The end of the chain, and the only reason the rest of the stack matters.">
+                <span class="node-num">06</span>
+                <span class="node-name">Outcome</span>
+              </a>
+            </li>
+          </ol>
+          <figcaption>Click any item for a short reference — or open the full page on Grokipedia.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- TABLE OF CONTENTS -->
+    <section class="toc">
+      <div class="container">
+        <p class="eyebrow">Contents</p>
+        <ol class="toc-list">
+          <li><a href="#stack"><span class="toc-num">01</span><span class="toc-title">The AI stack in plain English</span></a></li>
+          <li><a href="#gen-vs-agentic"><span class="toc-num">02</span><span class="toc-title">Generative vs agentic</span></a></li>
+          <li><a href="#agents"><span class="toc-num">03</span><span class="toc-title">What an AI agent actually is</span></a></li>
+          <li><a href="#automation-vs-ai"><span class="toc-num">04</span><span class="toc-title">Rules vs AI vs agents</span></a></li>
+          <li><a href="#tools"><span class="toc-num">05</span><span class="toc-title">The tool landscape</span></a></li>
+          <li><a href="#models"><span class="toc-num">06</span><span class="toc-title">Different models for different jobs</span></a></li>
+          <li><a href="#useful-now"><span class="toc-num">07</span><span class="toc-title">What AI is good at today</span></a></li>
+          <li><a href="#guardrails"><span class="toc-num">08</span><span class="toc-title">Where AI still needs guardrails</span></a></li>
+          <li><a href="#humans-vs-ai"><span class="toc-num">09</span><span class="toc-title">Humans vs AI</span></a></li>
+          <li><a href="#horizon"><span class="toc-num">10</span><span class="toc-title">Where this is heading next</span></a></li>
+          <li><a href="#trend"><span class="toc-num">11</span><span class="toc-title">What this means for Trend</span></a></li>
+          <li><a href="#glossary"><span class="toc-num">—</span><span class="toc-title">Glossary</span></a></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- 01 — The AI stack -->
+    <section class="section" id="stack">
+      <div class="container">
+        <header class="section-head">
+          <p class="section-num">01</p>
+          <p class="eyebrow">Foundations</p>
+          <h2>AI isn't one thing. It's a <em>stack</em>.</h2>
+          <p class="section-lede">
+            Different layers handle different decisions. When a conversation about AI feels muddled,
+            it's usually because two people are talking about different layers without realizing it.
+          </p>
+        </header>
+
+        <ol class="layers">
+          <li class="layer">
+            <a class="layer__link"
+               href="https://grokipedia.com/page/Foundation_model"
+               target="_blank" rel="noopener noreferrer"
+               data-preview-term="Model providers · Foundation model"
+               data-preview-summary="A large-scale model pretrained on broad data so it can be adapted to many downstream uses. Providers like OpenAI and Anthropic train these at enormous cost, then make them available via their own products or APIs.">
+              <span class="layer-tag">L1</span>
+              <div class="layer-body">
+                <h3>Model providers</h3>
+                <p>The companies that train and host the underlying models — OpenAI, Anthropic, Google, Meta, and others. Think of them as cloud infrastructure for intelligence: you rent access, you don't own the engine.</p>
+              </div>
+              <span class="layer-arrow" aria-hidden="true">↗</span>
+            </a>
+          </li>
+          <li class="layer">
+            <a class="layer__link"
+               href="https://grokipedia.com/page/Large_language_model"
+               target="_blank" rel="noopener noreferrer"
+               data-preview-term="Large language model"
+               data-preview-summary="A foundation model specifically trained on text to understand and generate language — the variant most relevant to the AI people use day-to-day. GPT, Claude, and Gemini are all LLMs.">
+              <span class="layer-tag">L2</span>
+              <div class="layer-body">
+                <h3>Models / LLMs</h3>
+                <p>The raw engine. Text in, text (or code, or tool calls) out. Capability, cost, and speed vary widely — and keep improving.</p>
+              </div>
+              <span class="layer-arrow" aria-hidden="true">↗</span>
+            </a>
+          </li>
+          <li class="layer">
+            <a class="layer__link"
+               href="https://grokipedia.com/page/Chatbot"
+               target="_blank" rel="noopener noreferrer"
+               data-preview-term="Apps &amp; interfaces · Chatbot"
+               data-preview-summary="A conversational interface that wraps a model in something humans can talk to. ChatGPT and Claude popularized the format for LLMs; older chatbots used rules and scripted replies.">
+              <span class="layer-tag">L3</span>
+              <div class="layer-body">
+                <h3>Apps &amp; interfaces</h3>
+                <p>Where humans actually interact: ChatGPT, Claude, Gemini, custom internal tools. This is the chrome around the engine — most of the UX you experience lives here.</p>
+              </div>
+              <span class="layer-arrow" aria-hidden="true">↗</span>
+            </a>
+          </li>
+          <li class="layer">
+            <a class="layer__link"
+               href="https://grokipedia.com/page/Web_API"
+               target="_blank" rel="noopener noreferrer"
+               data-preview-term="APIs · Web API"
+               data-preview-summary="A set of web-accessible endpoints that let one piece of software call another. It's how our own systems call OpenAI, Anthropic, or any provider programmatically — rather than through a chat UI.">
+              <span class="layer-tag">L4</span>
+              <div class="layer-body">
+                <h3>APIs</h3>
+                <p>The machine interface. How our own software calls a model programmatically — the layer that makes AI embeddable rather than just visitable.</p>
+              </div>
+              <span class="layer-arrow" aria-hidden="true">↗</span>
+            </a>
+          </li>
+          <li class="layer">
+            <a class="layer__link"
+               href="https://grokipedia.com/page/Workflow"
+               target="_blank" rel="noopener noreferrer"
+               data-preview-term="Workflow"
+               data-preview-summary="A defined sequence of tasks that takes an input through to an outcome. AI-assisted workflows insert language understanding and reasoning at specific steps, without letting AI run the whole process.">
+              <span class="layer-tag">L5</span>
+              <div class="layer-body">
+                <h3>Workflows</h3>
+                <p>Sequences where AI is one step among many. Usually a mix of deterministic logic and AI-powered reasoning. This is where most durable business value lives today.</p>
+              </div>
+              <span class="layer-arrow" aria-hidden="true">↗</span>
+            </a>
+          </li>
+          <li class="layer">
+            <a class="layer__link"
+               href="https://grokipedia.com/page/AI_agent"
+               target="_blank" rel="noopener noreferrer"
+               data-preview-term="AI agent"
+               data-preview-summary="A software system that uses a model to plan, take actions, and check its own work toward a goal. Unlike a chatbot, it can operate across tools and multiple steps rather than answering a single prompt.">
+              <span class="layer-tag">L6</span>
+              <div class="layer-body">
+                <h3>Agents</h3>
+                <p>Systems that use AI to plan, act, and iterate across tools toward a goal — with varying degrees of autonomy. Newer, higher ceiling, more care required.</p>
+              </div>
+              <span class="layer-arrow" aria-hidden="true">↗</span>
+            </a>
+          </li>
+          <li class="layer">
+            <a class="layer__link"
+               href="https://grokipedia.com/page/Human-in-the-loop"
+               target="_blank" rel="noopener noreferrer"
+               data-preview-term="Human-in-the-loop"
+               data-preview-summary="A design pattern where a person reviews, approves, or corrects AI output at defined points in an automated process. Often the most important reliability mechanism in the whole stack.">
+              <span class="layer-tag">L7</span>
+              <div class="layer-body">
+                <h3>Humans in the loop</h3>
+                <p>Where we review, approve, correct, or override. Not a limitation to engineer away — often the most important design choice in the whole stack.</p>
+              </div>
+              <span class="layer-arrow" aria-hidden="true">↗</span>
+            </a>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- 02 — Generative vs Agentic -->
+    <section class="section section--alt" id="gen-vs-agentic">
+      <div class="container">
+        <header class="section-head">
+          <p class="section-num">02</p>
+          <p class="eyebrow">The key distinction</p>
+          <h2>Generative AI <em>produces</em>. Agentic AI <em>pursues</em>.</h2>
+          <p class="section-lede">
+            Of every distinction on this page, this is the one most worth committing to memory.
+            The difference is not "smart vs. smarter" — it's content generation vs. goal-directed action.
+          </p>
+        </header>
+
+        <div class="compare">
+          <article class="compare-col">
+            <p class="compare-kicker">Generative</p>
+            <h3>Helps you create.</h3>
+            <p class="compare-def">Systems that turn a prompt into content — text, code, images, summaries, explanations.</p>
+            <dl class="compare-list">
+              <div><dt>Mode</dt><dd>Reactive. You ask; it responds.</dd></div>
+              <div><dt>Good at</dt><dd>Drafts, summaries, explanations, translation, first-pass analysis.</dd></div>
+              <div><dt>Shape of work</dt><dd>Bounded, single-turn or short-turn.</dd></div>
+              <div><dt>Examples</dt><dd>A marketing brief. A one-page explainer. A rewritten email.</dd></div>
+            </dl>
+          </article>
+
+          <article class="compare-col compare-col--accent">
+            <p class="compare-kicker">Agentic</p>
+            <h3>Helps you execute.</h3>
+            <p class="compare-def">Systems that take a goal, plan steps, use tools, check their own work, and iterate.</p>
+            <dl class="compare-list">
+              <div><dt>Mode</dt><dd>Proactive. You set a goal; it works through steps.</dd></div>
+              <div><dt>Good at</dt><dd>Multi-step research, tool-heavy tasks, coordinated operations.</dd></div>
+              <div><dt>Shape of work</dt><dd>Longer horizon, multiple tools, self-correction loops.</dd></div>
+              <div><dt>Examples</dt><dd>"Research this lead and draft outreach." "Find mismatches across these reports and flag them."</dd></div>
+            </dl>
+          </article>
+        </div>
+
+        <p class="callout">
+          Many modern systems combine both modes. A useful agent is often just a generative model
+          plus tools, memory, and a loop.
+        </p>
+
+        <figure class="media" aria-label="Video: Generative vs Agentic overview">
+          <div class="media-frame"
+               role="button"
+               tabindex="0"
+               data-video-id="EDb37y_MhRw"
+               data-video-title="Generative vs Agentic AI"
+               aria-label="Play video: Generative vs Agentic">
+            <div class="media-placeholder">
+              <span class="media-play" aria-hidden="true"></span>
+              <p class="media-kicker">Watch</p>
+              <p class="media-title">Generative vs Agentic, in under five minutes</p>
+            </div>
+          </div>
+          <figcaption>Supporting material. The written framing above stands on its own.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- 03 — Anatomy of an agent -->
+    <section class="section" id="agents">
+      <div class="container">
+        <header class="section-head">
+          <p class="section-num">03</p>
+          <p class="eyebrow">Anatomy</p>
+          <h2>What's <em>under the hood</em> of an AI agent.</h2>
+          <p class="section-lede">
+            An agent is not a chatbot with a fancy label. It's a system with parts that happen to use a
+            language model as its core reasoner — and the model is only one of them.
+          </p>
+        </header>
+
+        <figure class="flow" aria-label="Agent loop: input, context, reasoning, action, review.">
+          <ol class="flow-row">
+            <li class="flow-step">
+              <span class="flow-num">1</span>
+              <h4>Input</h4>
+              <p>A request, event, signal, or trigger — from a person or another system.</p>
+            </li>
+            <li class="flow-step">
+              <span class="flow-num">2</span>
+              <h4>Context</h4>
+              <p>Documents, data, policies, history, user identity — whatever the agent can see.</p>
+            </li>
+            <li class="flow-step">
+              <span class="flow-num">3</span>
+              <h4>Reasoning</h4>
+              <p>Deciding what to do next, and in what order, given the goal and context.</p>
+            </li>
+            <li class="flow-step">
+              <span class="flow-num">4</span>
+              <h4>Action</h4>
+              <p>Calling a tool, writing a file, sending a message, updating a system.</p>
+            </li>
+            <li class="flow-step">
+              <span class="flow-num">5</span>
+              <h4>Review</h4>
+              <p>Checking the result. Deciding what to do next — or handing off to a human.</p>
+            </li>
+          </ol>
+          <figcaption>Most of the useful work happens in the loop, not the single pass.</figcaption>
+        </figure>
+
+        <div class="split">
+          <div class="split-intro">
+            <h3>Ingredients of a useful agent</h3>
+            <p>Agents fail predictably when any of these are thin. Most of the work of building one is the work of getting these right.</p>
+          </div>
+          <ul class="ingredient-list">
+            <li><strong>Clear instructions.</strong> What it's for, what it isn't.</li>
+            <li><strong>Relevant knowledge.</strong> The documents, policies, and data it can reference.</li>
+            <li><strong>Policies and constraints.</strong> What's allowed, what requires human approval.</li>
+            <li><strong>The right tools.</strong> APIs, search, file access — whatever the job actually needs.</li>
+            <li><strong>Memory and state.</strong> So it can carry information across steps and sessions.</li>
+            <li><strong>Feedback loops.</strong> Human review, automated checks, or both.</li>
+          </ul>
+        </div>
+
+        <figure class="media" aria-label="Video: Anatomy of an AI agent">
+          <div class="media-frame"
+               role="button"
+               tabindex="0"
+               data-video-id="CAKGKkWf0tI"
+               data-video-title="Anatomy of an AI Agent"
+               aria-label="Play video: Anatomy of an AI agent">
+            <div class="media-placeholder">
+              <span class="media-play" aria-hidden="true"></span>
+              <p class="media-kicker">Watch</p>
+              <p class="media-title">Anatomy of an AI agent</p>
+            </div>
+          </div>
+          <figcaption>The diagram above is the primary teaching tool. The video reinforces it.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- 04 — Rules vs AI vs Agents -->
+    <section class="section section--alt" id="automation-vs-ai">
+      <div class="container">
+        <header class="section-head">
+          <p class="section-num">04</p>
+          <p class="eyebrow">When to use what</p>
+          <h2>Not every process should be <em>agentic</em>.</h2>
+          <p class="section-lede">
+            Some of the highest-value improvements at Trend won't look like AI at all. The design question
+            isn't "can AI do this?" — it's "what level of autonomy fits this task?"
+          </p>
+        </header>
+
+        <div class="spectrum" aria-hidden="true">
+          <span class="spectrum-end">Predictable</span>
+          <span class="spectrum-line"></span>
+          <span class="spectrum-end">Ambiguous</span>
+        </div>
+
+        <div class="cards cards--three">
+          <article class="card">
+            <p class="card-kicker">Rules-based automation</p>
+            <h3>When steps are predictable and repeatable.</h3>
+            <dl class="card-meta">
+              <div><dt>Examples</dt><dd>Syncing data, triggering reminders, conditional routing.</dd></div>
+              <div><dt>Strengths</dt><dd>Cheap, reliable, auditable.</dd></div>
+              <div><dt>Limits</dt><dd>Brittle when inputs get messy.</dd></div>
+            </dl>
+          </article>
+
+          <article class="card">
+            <p class="card-kicker">AI-assisted workflow</p>
+            <h3>When steps are mostly known but inputs are messy.</h3>
+            <dl class="card-meta">
+              <div><dt>Examples</dt><dd>Classifying inbound requests, extracting info from unstructured text, summarizing a call.</dd></div>
+              <div><dt>Strengths</dt><dd>Handles ambiguity while staying bounded.</dd></div>
+              <div><dt>Limits</dt><dd>Still a human-shaped process; AI doesn't run it end-to-end.</dd></div>
+            </dl>
+          </article>
+
+          <article class="card card--accent">
+            <p class="card-kicker">Agentic system</p>
+            <h3>When the path isn't fixed and reasoning across tools is required.</h3>
+            <dl class="card-meta">
+              <div><dt>Examples</dt><dd>Multi-step research, coordinated prep, composite decisions.</dd></div>
+              <div><dt>Strengths</dt><dd>Flexibility across unknown-shaped work.</dd></div>
+              <div><dt>Limits</dt><dd>Harder to debug, demands careful guardrails.</dd></div>
+            </dl>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 05 — Tools landscape -->
+    <section class="section" id="tools">
+      <div class="container">
+        <header class="section-head">
+          <p class="section-num">05</p>
+          <p class="eyebrow">The tool landscape</p>
+          <h2>What's actually out there, and what it's <em>for</em>.</h2>
+          <p class="section-lede">
+            The category of tool matters more than the brand name. Each sits at a different layer of the
+            stack and solves a different kind of problem — from the chat window people use every day to the
+            platforms where workflows get built.
+          </p>
+        </header>
+
+        <div class="table-wrap">
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Tool</th>
+                <th scope="col">What it is</th>
+                <th scope="col">What it's good for</th>
+                <th scope="col">Why it matters</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">ChatGPT &middot; Claude</th>
+                <td>Polished chat interfaces to a model.</td>
+                <td>Interactive thinking, drafting, research, exploration.</td>
+                <td>Entry point most people encounter first. Good for ad-hoc work, not for repeatable systems.</td>
+              </tr>
+              <tr>
+                <th scope="row">Cursor</th>
+                <td>An AI-native IDE.</td>
+                <td>Building software with an always-on collaborator in the editor.</td>
+                <td>Large productivity shift for development work — especially prototyping and internal tools.</td>
+              </tr>
+              <tr>
+                <th scope="row">Microsoft Copilot &middot; Notion AI</th>
+                <td>AI embedded inside tools we already use.</td>
+                <td>Drafting, summarizing, and analyzing inside Word, Excel, Gmail, Docs, Notion.</td>
+                <td>Meets people where they already work — no new tool to adopt, low friction to roll out.</td>
+              </tr>
+              <tr>
+                <th scope="row">Perplexity</th>
+                <td>AI-powered search and research.</td>
+                <td>Getting cited, up-to-date answers rather than generic summaries.</td>
+                <td>Starting to replace traditional search for real research tasks where sources matter.</td>
+              </tr>
+              <tr>
+                <th scope="row">Zapier AI &middot; Make &middot; n8n</th>
+                <td>Automation platforms with AI steps built in.</td>
+                <td>Connecting apps and inserting reasoning between them — without custom code.</td>
+                <td>Where most AI-assisted workflows get built at small-to-mid scale.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- 06 — Different models for different jobs -->
+    <section class="section section--alt" id="models">
+      <div class="container">
+        <header class="section-head">
+          <p class="section-num">06</p>
+          <p class="eyebrow">Model selection</p>
+          <h2>Bigger isn't <em>always better</em>.</h2>
+          <p class="section-lede">
+            Picking a model is an operational decision, not a prestige choice. The right one fits the task,
+            the budget, and the quality bar — not the hype cycle.
+          </p>
+        </header>
+
+        <div class="cards cards--three">
+          <article class="card">
+            <p class="card-kicker">Smaller &middot; specialized</p>
+            <h3>Narrow, high-volume, latency- or privacy-sensitive work.</h3>
+            <dl class="card-meta">
+              <div><dt>Best fit</dt><dd>Classification, routing, structured extraction, embeddings.</dd></div>
+              <div><dt>Strengths</dt><dd>Fast, cheap, easier to govern or self-host.</dd></div>
+              <div><dt>Tradeoffs</dt><dd>Narrower reasoning; less flexible on messy inputs.</dd></div>
+            </dl>
+          </article>
+
+          <article class="card">
+            <p class="card-kicker">General-purpose LLM</p>
+            <h3>Messy reasoning and language-heavy day-to-day work.</h3>
+            <dl class="card-meta">
+              <div><dt>Best fit</dt><dd>Drafting, summarization, research, analysis, most workflows.</dd></div>
+              <div><dt>Strengths</dt><dd>Broad capability, reasonable cost, mature tooling.</dd></div>
+              <div><dt>Tradeoffs</dt><dd>Overkill for simple structured tasks; under-powered for the hardest ones.</dd></div>
+            </dl>
+          </article>
+
+          <article class="card card--accent">
+            <p class="card-kicker">Frontier</p>
+            <h3>The hardest reasoning and highest-stakes outputs.</h3>
+            <dl class="card-meta">
+              <div><dt>Best fit</dt><dd>Complex multi-step reasoning, code-heavy agents, ambiguous judgment calls.</dd></div>
+              <div><dt>Strengths</dt><dd>Top-of-curve capability; keeps improving.</dd></div>
+              <div><dt>Tradeoffs</dt><dd>Higher cost and latency; reserve for tasks where the capability matters.</dd></div>
+            </dl>
+          </article>
+        </div>
+
+        <p class="callout">
+          The operational question is fitness, not prestige. Match capability to the task — and expect
+          the answer to change as models improve.
+        </p>
+      </div>
+    </section>
+
+    <!-- 07 — Useful now -->
+    <section class="section" id="useful-now">
+      <div class="container">
+        <header class="section-head">
+          <p class="section-num">07</p>
+          <p class="eyebrow">Useful now</p>
+          <h2>Already doing <em>real work</em>.</h2>
+          <p class="section-lede">
+            AI is already highly useful across a set of real, repeatable business categories. These are the
+            places where value is sitting in plain view — where adoption is mostly a discipline problem, not a capability problem.
+          </p>
+        </header>
+
+        <ul class="use-grid">
+          <li class="use-card">
+            <p class="use-kicker">Language</p>
+            <h4>Summarization</h4>
+            <p>Meetings, threads, reports, long documents — distilled into something a person can act on.</p>
+          </li>
+          <li class="use-card">
+            <p class="use-kicker">Language</p>
+            <h4>Drafting</h4>
+            <p>First-pass copy, emails, briefs, proposals. Not finished work — fast momentum.</p>
+          </li>
+          <li class="use-card use-card--accent">
+            <p class="use-kicker">Software</p>
+            <h4>Coding assistance</h4>
+            <p>Writing, refactoring, and debugging code inside IDEs like Cursor.</p>
+          </li>
+          <li class="use-card">
+            <p class="use-kicker">Structure</p>
+            <h4>Classification &amp; routing</h4>
+            <p>Tagging inbound requests, prioritizing tickets, routing work to the right place.</p>
+          </li>
+          <li class="use-card">
+            <p class="use-kicker">Research</p>
+            <h4>Research support</h4>
+            <p>Background scans, synthesis across sources, quick briefs on unfamiliar topics.</p>
+          </li>
+          <li class="use-card use-card--accent">
+            <p class="use-kicker">Analysis</p>
+            <h4>Structured analysis</h4>
+            <p>Extracting fields, comparing documents, flagging anomalies across data.</p>
+          </li>
+          <li class="use-card">
+            <p class="use-kicker">Integration</p>
+            <h4>Pulling info across systems</h4>
+            <p>Connecting scattered context — docs, threads, records — into one coherent view.</p>
+          </li>
+          <li class="use-card">
+            <p class="use-kicker">Execution</p>
+            <h4>Bounded multi-step work</h4>
+            <p>Taking a defined process with some ambiguity and running it end-to-end, with review.</p>
+          </li>
+        </ul>
+
+        <p class="aside aside--compact">
+          <span class="aside-kicker">What's underneath</span>
+          All of these lean on a single underlying capability: AI now understands natural language
+          dramatically better than older software could. That alone unlocks most of the list.
+        </p>
+      </div>
+    </section>
+
+    <!-- 08 — Guardrails -->
+    <section class="section section--alt" id="guardrails">
+      <div class="container">
+        <header class="section-head">
+          <p class="section-num">08</p>
+          <p class="eyebrow">Needs oversight</p>
+          <h2>Impressively capable. <em>Still unreliable.</em></h2>
+          <p class="section-lede">
+            AI can do remarkable things and still fail in consistent, knowable ways. The right response
+            isn't fear or hype — it's disciplined design.
+          </p>
+        </header>
+
+        <ol class="risk-list">
+          <li class="risk-item">
+            <span class="risk-num">01</span>
+            <div class="risk-body">
+              <h4>Hallucinations</h4>
+              <p>Models can produce confident, fluent answers that are simply wrong. The fluency is the hazard — errors don't announce themselves.</p>
+            </div>
+          </li>
+          <li class="risk-item risk-item--accent">
+            <span class="risk-num">02</span>
+            <div class="risk-body">
+              <h4>Overconfidence</h4>
+              <p>Tone stays assured even when the model is guessing. Calibration is not a built-in feature — it has to be designed in.</p>
+            </div>
+          </li>
+          <li class="risk-item">
+            <span class="risk-num">03</span>
+            <div class="risk-body">
+              <h4>Brittle autonomy</h4>
+              <p>The further an agent runs on its own, the more small errors compound. Long unsupervised chains are the highest-risk shape of work.</p>
+            </div>
+          </li>
+          <li class="risk-item">
+            <span class="risk-num">04</span>
+            <div class="risk-body">
+              <h4>Incomplete business context</h4>
+              <p>Models don't know our priorities, policies, or recent decisions unless we deliberately give them that context. Generic answers follow from generic context.</p>
+            </div>
+          </li>
+          <li class="risk-item risk-item--accent">
+            <span class="risk-num">05</span>
+            <div class="risk-body">
+              <h4>Inconsistent judgment</h4>
+              <p>Similar inputs can produce different outputs. Good enough on average is not the same as reliable on a specific case.</p>
+            </div>
+          </li>
+          <li class="risk-item">
+            <span class="risk-num">06</span>
+            <div class="risk-body">
+              <h4>Ongoing need for evaluation</h4>
+              <p>Inputs drift, models update, behaviors shift. Quality has to be measured continuously — not once, at launch.</p>
+            </div>
+          </li>
+        </ol>
+
+        <p class="callout">
+          None of this is a reason to hold back. It's a reason to design with grounding, guardrails,
+          and human-in-the-loop review built in from the start.
+        </p>
+      </div>
+    </section>
+
+    <!-- 09 — Humans vs AI -->
+    <section class="section" id="humans-vs-ai">
+      <div class="container">
+        <header class="section-head">
+          <p class="section-num">09</p>
+          <p class="eyebrow">Leadership frame</p>
+          <h2>Humans own the <em>what</em>. AI helps with the <em>how</em>.</h2>
+          <p class="section-lede">
+            This is not a replacement story. It's a leverage story. The best systems pair human intent
+            with machine speed — and leadership still owns purpose and accountability.
+          </p>
+        </header>
+
+        <div class="split-panel">
+          <article class="panel panel--positive">
+            <p class="panel-kicker">Humans still own</p>
+            <ul>
+              <li>Goals, priorities, and boundaries</li>
+              <li>Tradeoffs and judgment calls</li>
+              <li>Business context and relationships</li>
+              <li>Ethical and policy constraints</li>
+              <li>Accountability for outcomes</li>
+            </ul>
+          </article>
+
+          <article class="panel panel--caution">
+            <p class="panel-kicker">AI is increasingly useful for</p>
+            <ul>
+              <li>Generating options and first drafts</li>
+              <li>Executing bounded, well-defined tasks</li>
+              <li>Assisting with analysis and research</li>
+              <li>Running workflows at scale</li>
+              <li>Turning language into structure</li>
+            </ul>
+          </article>
+        </div>
+
+        <blockquote class="pullquote">
+          Trend should think of AI as an <em>operating lever</em> —
+          not as an autonomous replacement for leadership or judgment.
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- 10 — Where this is heading -->
+    <section class="section section--alt" id="horizon">
+      <div class="container">
+        <header class="section-head">
+          <p class="section-num">10</p>
+          <p class="eyebrow">Near-term horizon</p>
+          <h2>What <em>actually changes</em> in the next 12–24 months.</h2>
+          <p class="section-lede">
+            Keeping this short on purpose. The goal is a grounded view, not prediction theater. The next
+            phase isn't better chat — it's more real operational systems.
+          </p>
+        </header>
+
+        <div class="now-next">
+          <div class="now-next-col">
+            <p class="now-next-label">Now</p>
+            <ul>
+              <li>AI mostly used inside chat tools</li>
+              <li>Workflow integration still uneven</li>
+              <li>Agents impressive in demos, cautious in production</li>
+              <li>Evaluation &amp; governance practices still maturing</li>
+            </ul>
+          </div>
+          <div class="now-next-col now-next-col--next">
+            <p class="now-next-label">Next</p>
+            <ul>
+              <li>More AI embedded directly into workflows</li>
+              <li>More tool-using agents in real operations</li>
+              <li>More orchestration across specialized components</li>
+              <li>Better human-in-the-loop design patterns</li>
+              <li>More governance, evaluation, and traceability</li>
+              <li>More fit-for-purpose deployment — including smaller reasoning models where they fit</li>
+            </ul>
+          </div>
+        </div>
+
+        <p class="aside aside--compact">
+          <span class="aside-kicker">Deliberately out of scope</span>
+          Robotics, quantum, and AGI speculation. Interesting, but not what will change how Trend operates this year.
+        </p>
+      </div>
+    </section>
+
+    <!-- 11 — What this means for Trend -->
+    <section class="section" id="trend">
+      <div class="container">
+        <header class="section-head">
+          <p class="section-num">11</p>
+          <p class="eyebrow">Applying it</p>
+          <h2>How this applies to <em>my role</em> as AI Systems Builder.</h2>
+          <p class="section-lede">
+            Trend created this role because AI is becoming relevant at the workflow and systems level, not
+            just the experimentation level. The opportunity is to identify where AI can improve real work,
+            choose the right level of automation, design guardrails, and bring the right tools into the stack.
+          </p>
+        </header>
+
+        <div class="cards cards--four">
+          <article class="mini-card">
+            <p class="mini-kicker">Focus area</p>
+            <h4>Operational workflows</h4>
+            <p>Reduce manual overhead on the 20% of work that eats 80% of the time.</p>
+          </article>
+          <article class="mini-card">
+            <p class="mini-kicker">Focus area</p>
+            <h4>Information handling</h4>
+            <p>Turn scattered context — docs, threads, reports — into something consistently accessible.</p>
+          </article>
+          <article class="mini-card">
+            <p class="mini-kicker">Focus area</p>
+            <h4>Smarter automations</h4>
+            <p>Move selected processes from rule-based to AI-assisted where ambiguity blocks scale.</p>
+          </article>
+          <article class="mini-card mini-card--accent">
+            <p class="mini-kicker">Focus area</p>
+            <h4>Development tooling</h4>
+            <p>Use AI-native tooling to ship internal software faster and with fewer regressions.</p>
+          </article>
+        </div>
+
+        <p class="principle">
+          <span class="principle-label">Working principle</span>
+          <span class="principle-text">Applied operational value, not innovation theater. Some of the best work is knowing where <em>not</em> to apply AI.</span>
+        </p>
+      </div>
+    </section>
+
+    <!-- GLOSSARY -->
+    <section class="section section--alt" id="glossary">
+      <div class="container">
+        <header class="section-head">
+          <p class="section-num">—</p>
+          <p class="eyebrow">Appendix</p>
+          <h2>Glossary</h2>
+          <p class="section-lede">
+            Short definitions, in the vocabulary we'll use internally. Click any term to expand.
+          </p>
+        </header>
+
+        <ul class="glossary">
+          <li class="glossary-item">
+            <details>
+              <summary>
+                <span class="term">Model provider</span>
+                <span class="term-hint">Who trains and hosts the model</span>
+              </summary>
+              <p>The company that trains and serves the underlying LLM — OpenAI, Anthropic, Google, Meta, and others. The "cloud for intelligence" layer.</p>
+              <a class="glossary-learn" href="https://grokipedia.com/page/Foundation_model" target="_blank" rel="noopener noreferrer">Learn more <span aria-hidden="true">↗</span></a>
+            </details>
+          </li>
+          <li class="glossary-item">
+            <details>
+              <summary>
+                <span class="term">LLM &mdash; Large Language Model</span>
+                <span class="term-hint">The core engine</span>
+              </summary>
+              <p>A model that takes text (or code, or structured input) and generates text, code, or tool calls in response. Capabilities, speed, and cost vary widely between models.</p>
+              <a class="glossary-learn" href="https://grokipedia.com/page/Large_language_model" target="_blank" rel="noopener noreferrer">Learn more <span aria-hidden="true">↗</span></a>
+            </details>
+          </li>
+          <li class="glossary-item">
+            <details>
+              <summary>
+                <span class="term">Generative AI</span>
+                <span class="term-hint">Produces content</span>
+              </summary>
+              <p>AI that produces content — text, code, images, audio — in response to a prompt.</p>
+              <a class="glossary-learn" href="https://grokipedia.com/page/Generative_artificial_intelligence" target="_blank" rel="noopener noreferrer">Learn more <span aria-hidden="true">↗</span></a>
+            </details>
+          </li>
+          <li class="glossary-item">
+            <details>
+              <summary>
+                <span class="term">Agentic AI</span>
+                <span class="term-hint">Pursues goals</span>
+              </summary>
+              <p>AI that pursues a goal by planning, acting, and reviewing across tools, with varying degrees of autonomy.</p>
+              <a class="glossary-learn" href="https://grokipedia.com/page/Agentic_AI" target="_blank" rel="noopener noreferrer">Learn more <span aria-hidden="true">↗</span></a>
+            </details>
+          </li>
+          <li class="glossary-item">
+            <details>
+              <summary>
+                <span class="term">AI agent</span>
+                <span class="term-hint">System around a model</span>
+              </summary>
+              <p>A system built around a model that takes in a goal, gathers context, reasons, uses tools, and iterates toward a result.</p>
+              <a class="glossary-learn" href="https://grokipedia.com/page/AI_agent" target="_blank" rel="noopener noreferrer">Learn more <span aria-hidden="true">↗</span></a>
+            </details>
+          </li>
+          <li class="glossary-item">
+            <details>
+              <summary>
+                <span class="term">API</span>
+                <span class="term-hint">How software calls a model</span>
+              </summary>
+              <p>Application Programming Interface — the programmatic way for one piece of software to call another, including models and tools.</p>
+              <a class="glossary-learn" href="https://grokipedia.com/page/Web_API" target="_blank" rel="noopener noreferrer">Learn more <span aria-hidden="true">↗</span></a>
+            </details>
+          </li>
+          <li class="glossary-item">
+            <details>
+              <summary>
+                <span class="term">Interface / surface</span>
+                <span class="term-hint">Where a person interacts</span>
+              </summary>
+              <p>Where a human interacts with a system: a chat window, a button in an app, a CLI, an IDE.</p>
+              <a class="glossary-learn" href="https://grokipedia.com/page/User_interface" target="_blank" rel="noopener noreferrer">Learn more <span aria-hidden="true">↗</span></a>
+            </details>
+          </li>
+          <li class="glossary-item">
+            <details>
+              <summary>
+                <span class="term">IDE</span>
+                <span class="term-hint">Where software is built</span>
+              </summary>
+              <p>Integrated Development Environment — a specialized editor for writing software (e.g. VS Code, Cursor, JetBrains).</p>
+              <a class="glossary-learn" href="https://grokipedia.com/page/Integrated_development_environment" target="_blank" rel="noopener noreferrer">Learn more <span aria-hidden="true">↗</span></a>
+            </details>
+          </li>
+          <li class="glossary-item">
+            <details>
+              <summary>
+                <span class="term">CLI</span>
+                <span class="term-hint">Text-based control</span>
+              </summary>
+              <p>Command-Line Interface — a text-based control surface for software. Common in automation and increasingly used by agents.</p>
+              <a class="glossary-learn" href="https://grokipedia.com/page/Command-line_interface" target="_blank" rel="noopener noreferrer">Learn more <span aria-hidden="true">↗</span></a>
+            </details>
+          </li>
+          <li class="glossary-item">
+            <details>
+              <summary>
+                <span class="term">RAG &mdash; Retrieval-Augmented Generation</span>
+                <span class="term-hint">Grounding in our documents</span>
+              </summary>
+              <p>A technique where a model's answer is grounded in specific documents that are retrieved first and supplied as context.</p>
+              <a class="glossary-learn" href="https://grokipedia.com/page/Retrieval-augmented_generation" target="_blank" rel="noopener noreferrer">Learn more <span aria-hidden="true">↗</span></a>
+            </details>
+          </li>
+          <li class="glossary-item">
+            <details>
+              <summary>
+                <span class="term">Human in the loop</span>
+                <span class="term-hint">Review &amp; approval by design</span>
+              </summary>
+              <p>A design pattern where a human reviews, approves, or corrects AI output at defined points in a workflow.</p>
+              <a class="glossary-learn" href="https://grokipedia.com/page/Human-in-the-loop" target="_blank" rel="noopener noreferrer">Learn more <span aria-hidden="true">↗</span></a>
+            </details>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-row">
+      <p class="footer-left">Trend &middot; Internal field guide &middot; v1.0 &middot; Apr 2026</p>
+      <p class="footer-right">A living document. This will keep updating.</p>
+    </div>
+  </footer>
+
+  <div class="preview" id="preview" role="dialog" aria-modal="true" aria-labelledby="preview-term" aria-hidden="true" data-open="false">
+    <div class="preview-scrim" aria-hidden="true"></div>
+    <div class="preview-panel" role="document">
+      <button class="preview-close" type="button" aria-label="Close">×</button>
+      <p class="eyebrow preview-kicker">Reference</p>
+      <h3 class="preview-term" id="preview-term"></h3>
+      <p class="preview-summary" id="preview-summary"></p>
+      <a class="preview-link" id="preview-link" href="#" target="_blank" rel="noopener noreferrer">
+        Open on Grokipedia <span aria-hidden="true">↗</span>
+      </a>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
