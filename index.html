@@ -458,9 +458,8 @@
           <p class="eyebrow">The tool landscape</p>
           <h2>What's actually out there, and what it's <em>for</em>.</h2>
           <p class="section-lede">
-            The category of tool matters more than the brand name. Each sits at a different layer of the
-            stack and solves a different kind of problem — from the chat window people use every day to the
-            platforms where workflows get built.
+            The useful lens is category, not brand. This table is organized by layer of the stack; click any
+            category to open a current list of the products, models, and platforms shaping it right now.
           </p>
         </header>
 
@@ -476,34 +475,70 @@
             </thead>
             <tbody>
               <tr>
-                <th scope="row">ChatGPT &middot; Claude</th>
-                <td>Polished chat interfaces to a model.</td>
-                <td>Interactive thinking, drafting, research, exploration.</td>
-                <td>Entry point most people encounter first. Good for ad-hoc work, not for repeatable systems.</td>
+                <th scope="row">
+                  <button class="landscape-trigger" type="button" data-landscape-key="providers" aria-haspopup="dialog" aria-controls="preview">
+                    <span class="landscape-label">Model providers</span>
+                    <span class="landscape-count" data-landscape-count>10 examples</span>
+                  </button>
+                </th>
+                <td>Companies and labs that train frontier models and expose them through products or APIs.</td>
+                <td>Evaluating ecosystem strength, pricing, safety posture, platform fit, and where future capability is likely to come from.</td>
+                <td>Provider choice shapes the rest of the stack: model access, governance options, tooling, and long-term dependence.</td>
               </tr>
               <tr>
-                <th scope="row">Cursor</th>
-                <td>An AI-native IDE.</td>
-                <td>Building software with an always-on collaborator in the editor.</td>
-                <td>Large productivity shift for development work — especially prototyping and internal tools.</td>
+                <th scope="row">
+                  <button class="landscape-trigger" type="button" data-landscape-key="models" aria-haspopup="dialog" aria-controls="preview">
+                    <span class="landscape-label">LLMs / frontier models</span>
+                    <span class="landscape-count" data-landscape-count>10 examples</span>
+                  </button>
+                </th>
+                <td>Specific models with different strengths in reasoning, code, vision, context length, and speed.</td>
+                <td>Matching the right model to the job instead of treating AI as one generic commodity.</td>
+                <td>This is where the real capability, latency, and cost tradeoffs show up in practice.</td>
               </tr>
               <tr>
-                <th scope="row">Microsoft Copilot &middot; Notion AI</th>
-                <td>AI embedded inside tools we already use.</td>
-                <td>Drafting, summarizing, and analyzing inside Word, Excel, Gmail, Docs, Notion.</td>
-                <td>Meets people where they already work — no new tool to adopt, low friction to roll out.</td>
+                <th scope="row">
+                  <button class="landscape-trigger" type="button" data-landscape-key="ides" aria-haspopup="dialog" aria-controls="preview">
+                    <span class="landscape-label">AI IDEs</span>
+                    <span class="landscape-count" data-landscape-count>6 examples</span>
+                  </button>
+                </th>
+                <td>Developer environments where AI is embedded directly into editing, review, terminal work, and deployment.</td>
+                <td>Shipping software faster with an always-on collaborator that understands the codebase and tooling around it.</td>
+                <td>These tools change the day-to-day mechanics of software teams, not just the quality of chat answers.</td>
               </tr>
               <tr>
-                <th scope="row">Perplexity</th>
-                <td>AI-powered search and research.</td>
-                <td>Getting cited, up-to-date answers rather than generic summaries.</td>
-                <td>Starting to replace traditional search for real research tasks where sources matter.</td>
+                <th scope="row">
+                  <button class="landscape-trigger" type="button" data-landscape-key="agents" aria-haspopup="dialog" aria-controls="preview">
+                    <span class="landscape-label">Agents</span>
+                    <span class="landscape-count" data-landscape-count>7 examples</span>
+                  </button>
+                </th>
+                <td>Task-executing systems that browse, edit, run tools, and follow through across multiple steps.</td>
+                <td>Delegating longer, messier workflows where progress matters more than a single good answer.</td>
+                <td>This is where AI starts acting less like a consultant and more like an operator.</td>
               </tr>
               <tr>
-                <th scope="row">Zapier AI &middot; Make &middot; n8n</th>
-                <td>Automation platforms with AI steps built in.</td>
-                <td>Connecting apps and inserting reasoning between them — without custom code.</td>
-                <td>Where most AI-assisted workflows get built at small-to-mid scale.</td>
+                <th scope="row">
+                  <button class="landscape-trigger" type="button" data-landscape-key="automation" aria-haspopup="dialog" aria-controls="preview">
+                    <span class="landscape-label">Low-code / deterministic automation</span>
+                    <span class="landscape-count" data-landscape-count>7 examples</span>
+                  </button>
+                </th>
+                <td>Workflow builders that connect apps, triggers, rules, approvals, and bounded AI steps.</td>
+                <td>Operationalizing repeatable processes without writing a full custom system from scratch.</td>
+                <td>For many teams, this is the fastest path from experimentation to actual business process change.</td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <button class="landscape-trigger" type="button" data-landscape-key="research" aria-haspopup="dialog" aria-controls="preview">
+                    <span class="landscape-label">Research agents</span>
+                    <span class="landscape-count" data-landscape-count>5 examples</span>
+                  </button>
+                </th>
+                <td>Tools optimized for multi-step search, synthesis, citations, and evidence-backed outputs.</td>
+                <td>Competitive scans, market mapping, literature review, diligence, and any task where sources matter.</td>
+                <td>They are beginning to replace manual web research for serious knowledge work, not just casual lookup.</td>
               </tr>
             </tbody>
           </table>
@@ -965,6 +1000,9 @@
       <p class="eyebrow preview-kicker">Reference</p>
       <h3 class="preview-term" id="preview-term"></h3>
       <p class="preview-summary" id="preview-summary"></p>
+      <div class="preview-list-wrap" id="preview-list-wrap" hidden>
+        <ul class="preview-list" id="preview-list"></ul>
+      </div>
       <a class="preview-link" id="preview-link" href="#" target="_blank" rel="noopener noreferrer">
         Open on Grokipedia <span aria-hidden="true">↗</span>
       </a>
